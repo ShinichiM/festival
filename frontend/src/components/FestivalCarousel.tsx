@@ -5,7 +5,7 @@ export const FestivalCarousel = () => {
     <Carousel fade>
       <CarouselItem>
         <img
-          className="d-block w-100"
+          className="d-block w-100 h-100vh"
           src="/images/chips.jpg"
           alt="First slide"
         />
@@ -28,32 +28,43 @@ export const FestivalCarousel = () => {
           </div>
         </Carousel.Caption>
       </CarouselItem>
-      {/* <CarouselItem>
+      <CarouselItem>
         <img
-          className="d-block w-100"
+          className="d-block w-100 h-100vh"
           src="/images/falafel.jpg"
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div className="container">
+            <div className="row align-items-center justify-content-center">
+              <h2 className="display-4 mb-2">
+                Hosting various events with local cuisine!
+              </h2>
+            </div>
+            <div className="row align-items-center justify-content-center">
+              <h3>Test text input</h3>
+            </div>
+          </div>
         </Carousel.Caption>
       </CarouselItem>
       <CarouselItem>
         <img
-          className="d-block w-100"
+          className="d-block w-100 h-100vh"
           src="images/food_stall.jpg"
           alt="Third slide"
         />
-
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <div className="container">
+            <div className="row align-items-center justify-content-center">
+              <h2 className="display-4 mb-2">Come check us out!</h2>
+            </div>
+            <div className="row align-items-center justify-content-center">
+              <h3>Test Text</h3>
+            </div>
+          </div>
         </Carousel.Caption>
-      </CarouselItem> */}
+      </CarouselItem>
     </Carousel>
   );
 };

@@ -5,6 +5,7 @@ import { Events } from "./pages/Events";
 import { Tickets } from "./pages/Tickets";
 import { Error } from "./pages/Error";
 import { Navigation } from "./components/Navigation";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/tickets" element={<Tickets />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

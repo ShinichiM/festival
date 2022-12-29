@@ -8241,6 +8241,10 @@ button.bg-dark:focus {
   height: 100% !important;
 }
 
+.h-100vh {
+  height: 100vh !important;
+}
+
 .h-auto {
   height: auto !important;
 }
