@@ -8204,6 +8204,9 @@ button.bg-dark:focus {
 .shadow-none {
   box-shadow: none !important;
 }
+.w-footer-icon {
+  width: 5vw !important;
+}
 
 .w-25 {
   width: 25% !important;
@@ -8366,6 +8369,10 @@ button.bg-dark:focus {
   margin-top: 1rem !important;
 }
 
+.mt-5,
+.my-5 {
+  margin-top: 1.5rem !important;
+}
 .mr-3,
 .mx-3 {
   margin-right: 1rem !important;

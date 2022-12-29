@@ -1,37 +1,57 @@
 export const Footer = () => {
   return (
-    <footer className="page-footer">
       <div className="container">
         <div className="row">
-          <div className="col-md-12 py-5">
-            <div className="flex-center">
-              {/* <!-- Facebook --> */}
-              <a>
-                <img src="/images/icons/facebook.svg" alt="facebook" />
-              </a>
-              {/* <!-- Twitter --> */}
-              <a>
-                <img src="/images/icons/twitter.svg" alt="twitter" />
-              </a>
-              {/* <!-- Google +--> */}
-              <a>
-                <img src="/images/icons/googleplus.svg" alt="google-plus" />
-              </a>
-              {/* <!--Instagram--> */}
-              <a>
-                <img src="/images/icons/instagram.svg" alt="instagram" />
-              </a>
-              {/* <!--Pinterest--> */}
-              <a>
-                <img src="/images/icons/pinterest.svg" alt="pinterest" />
-              </a>
-            </div>
+          <div className="col-md-12 py-3">
+            <ul className="d-flex justify-content-between m-0">
+              <li className="list-unstyled">
+                <a href="#facebook">
+                  <img
+                    src="/images/icons/facebook.svg"
+                    className="w-footer-icon"
+                    alt="facebook"
+                  />
+                </a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#twitter">
+                  <img
+                    src="/images/icons/twitter.svg"
+                    className="w-footer-icon"
+                    alt="twitter"
+                  />
+                </a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#googlePlus">
+                  <img
+                    src="/images/icons/googleplus.svg"
+                    className="w-footer-icon"
+                    alt="google-plus"
+                  />
+                </a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#instagram">
+                  <img
+                    src="/images/icons/instagram.svg"
+                    className="w-footer-icon"
+                    alt="instagram"
+                  />
+                </a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#pinterest">
+                  <img
+                    src="/images/icons/pinterest.svg"
+                    className="w-footer-icon"
+                    alt="pinterest"
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <div className="footer-copyright text-center py-3 text-white">
-        @{Date().split(" ")[3]} ShinichiM
-      </div>
-    </footer>
   );
 };
