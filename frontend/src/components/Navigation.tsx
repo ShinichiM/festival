@@ -19,7 +19,7 @@ export const Navigation = () => {
     window.location.pathname = navigationTo;
   };
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <span
           className="navbar-brand cursor-pointer"

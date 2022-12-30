@@ -1,10 +1,103 @@
-import React from "react";
+import React, { useState } from "react";
+import { JsxExpression } from "typescript";
 export const Schedule = () => {
-  const scheduleList = require("../components/ScheduleList.json");
+  const eventList = require("../components/ScheduleList.json");
+  const [newDay, setNewDay] = useState<boolean>(true);
 
+  const dayOneEvents = eventList.filter((item: any) => item.day === "Day 1");
+  const dayTwoEvents = eventList.filter((item: any) => item.day === "Day 2");
+  const dayThreeEvents = eventList.filter((item: any) => item.day === "Day 3");
+
+  const handleEventSelection = (event: React.MouseEvent) => {
+    console.log("Test");
+  };
+  const createDayOneEvents = (): JSX.Element => {
+    const jsxElements = dayOneEvents ? (
+      <div className="container mt-5" id="day-1-head">
+        <div className="card">
+          <h5 className="card-header">Day 1</h5>
+          {dayOneEvents.map((item: any) => {
+            return (
+              <div
+                className="card-body clickable bg-dark text-white"
+                onClick={(e) => handleEventSelection(e)}
+              >
+                <h5 className="card-title">{item.title || ""}</h5>
+                <p className="card-text">
+                  {item.description || "Oops! We have nothing :("}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    ) : (
+      <></>
+    );
+    return jsxElements;
+  };
+
+  const createDayTwoEvents = (): JSX.Element => {
+    const jsxElements = dayTwoEvents ? (
+      <div className="container mt-5" id="day-1-head">
+        <div className="card">
+          <h5 className="card-header">Day 2</h5>
+          {dayOneEvents.map((item: any) => {
+            return (
+              <div
+                className="card-body clickable bg-dark text-white"
+                onClick={(e) => handleEventSelection(e)}
+              >
+                <h5 className="card-title">{item.title || ""}</h5>
+                <p className="card-text">
+                  {item.description || "Oops! We have nothing :("}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    ) : (
+      <></>
+    );
+    return jsxElements;
+  };
+
+  const createDayThreeEvents = (): JSX.Element => {
+    const jsxElements = dayThreeEvents ? (
+      <div className="container mt-5" id="day-1-head">
+        <div className="card">
+          <h5 className="card-header">Day 3</h5>
+          {dayOneEvents.map((item: any) => {
+            return (
+              <div
+                className="card-body clickable bg-dark text-white"
+                onClick={(e) => handleEventSelection(e)}
+              >
+                <h5 className="card-title">{item.title || ""}</h5>
+                <p className="card-text">
+                  {item.description || "Oops! We have nothing :("}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    ) : (
+      <></>
+    );
+    return jsxElements;
+  };
   return (
-    <div id="page" className="container">
-      <h1 className="mb-3 text-white">Our Schedule</h1>
+    <div className="schedule-content h-100vh w-100 overflow-auto py-3">
+      <div id="page" className="container">
+        <h1 className="mb-3 text-white bg-dark w-fit-content rounded px-3">
+          Our Schedule
+        </h1>
+        {createDayOneEvents()}
+        {createDayTwoEvents()}
+        {createDayThreeEvents()}
+      </div>
     </div>
   );
 };

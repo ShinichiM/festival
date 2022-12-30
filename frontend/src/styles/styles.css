@@ -76,7 +76,10 @@ footer {
   background-image: url("../../public/images/food-table.jpg");
   background-size: cover;
 }
-
+.schedule-content {
+  background-image: url("../../public/images/food_stall.jpg");
+  background-size: cover;
+}
 .pt-5,
 .py-5 {
   color: white;
@@ -102,8 +105,8 @@ footer {
 }
 
 #page {
-  margin-top: 100px;
-  padding-bottom: 200px;
+  /* margin-top: 100px; */
+  /* padding-bottom: 200px; */
 }
 
 #carousel-container {

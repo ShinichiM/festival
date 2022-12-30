@@ -3,8 +3,8 @@ import React from "react";
 export const Tickets = () => {
   return (
     <>
-      <section className="ticket-content w-100 h-100vh">
-        <div className="ticket-container container mt-10">
+      <div className="ticket-content w-100 h-100vh">
+        <div className="ticket-container container">
           <h1 className="display-4 text-white w-fit-content bg-dark px-3 rounded">
             Ticket Options
           </h1>
@@ -52,7 +52,7 @@ export const Tickets = () => {
             </button>
           </div>
         </div>
-      </section>
+      </div>
       <div
         className="modal fade"
         id="purchaseModal"
