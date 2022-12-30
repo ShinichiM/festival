@@ -3,49 +3,51 @@ import React from "react";
 export const Tickets = () => {
   return (
     <>
-      <div className="ticket-container container mt-10">
-        <h1>Ticket Options</h1>
-        <table className="table table-striped table-dark" id="ticket-table">
-          <thead>
-            <tr>
-              <th scope="col">Options</th>
-              <th scope="col">1-Day Pass</th>
-              <th scope="col">2-Day Pass</th>
-              <th scope="col">3-Day Pass</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Single Pass</th>
-              <td>$25</td>
-              <td>$50</td>
-              <td>$70</td>
-            </tr>
-            <tr>
-              <th scope="row">Pack 2</th>
-              <td>$40</td>
-              <td>$90</td>
-              <td>$120</td>
-            </tr>
-            <tr>
-              <th scope="row">Pack of 3</th>
-              <td>$55</td>
-              <td>$80</td>
-              <td>$105</td>
-            </tr>
-          </tbody>
-        </table>
-        <div className="col text-center">
-          <button
-            type="button"
-            className="btn btn-primary purchase"
-            data-toggle="modal"
-            data-target="#purchaseModal"
-          >
-            Purchase Tickets!
-          </button>
+      <section className="ticket-content w-100 h-100vh">
+        <div className="ticket-container container mt-10">
+          <h1 className="display-4 text-white w-fit-content bg-dark px-3 rounded">Ticket Options</h1>
+          <table className="table table-striped table-dark rounded" id="ticket-table">
+            <thead>
+              <tr>
+                <th scope="col">Options</th>
+                <th scope="col">1-Day Pass</th>
+                <th scope="col">2-Day Pass</th>
+                <th scope="col">3-Day Pass</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Single Pass</th>
+                <td>$25</td>
+                <td>$50</td>
+                <td>$70</td>
+              </tr>
+              <tr>
+                <th scope="row">Pack 2</th>
+                <td>$40</td>
+                <td>$90</td>
+                <td>$120</td>
+              </tr>
+              <tr>
+                <th scope="row">Pack of 3</th>
+                <td>$55</td>
+                <td>$80</td>
+                <td>$105</td>
+              </tr>
+            </tbody>
+          </table>
+          <div className="col text-center">
+            <button
+              type="button"
+              className="btn btn-primary purchase"
+              data-toggle="modal"
+              data-target="#purchaseModal"
+            >
+              Purchase Tickets!
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
       <div
         className="modal fade"
         id="purchaseModal"
