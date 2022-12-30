@@ -1,12 +1,6 @@
 import React from "react";
 import "../styles/styles.css";
 import "../styles/bootstrap.css";
-// <link rel="stylesheet" href="/assets/css/style.css" />
-// <link rel="stylesheet" href="/assets/css/bootstrap.css" />
-// <link
-//   rel="stylesheet"
-//   href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-// />
 
 export const Navigation = () => {
   const handlePageChange = (event: React.MouseEvent<HTMLElement>) => {

@@ -5,8 +5,13 @@ export const Tickets = () => {
     <>
       <section className="ticket-content w-100 h-100vh">
         <div className="ticket-container container mt-10">
-          <h1 className="display-4 text-white w-fit-content bg-dark px-3 rounded">Ticket Options</h1>
-          <table className="table table-striped table-dark rounded" id="ticket-table">
+          <h1 className="display-4 text-white w-fit-content bg-dark px-3 rounded">
+            Ticket Options
+          </h1>
+          <table
+            className="table table-striped table-dark rounded"
+            id="ticket-table"
+          >
             <thead>
               <tr>
                 <th scope="col">Options</th>

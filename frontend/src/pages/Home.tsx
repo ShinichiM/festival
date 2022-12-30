@@ -1,8 +1,4 @@
 import { FestivalCarousel } from "../components/FestivalCarousel";
-import { Navigation } from "../components/Navigation";
-import { Footer } from "../components/Footer";
-// import "../styles/bootstrap.css";
-// import "../styles/styles.css";
 
 export const Home = () => {
   return (
