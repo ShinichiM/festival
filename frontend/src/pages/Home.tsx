@@ -1,6 +1,6 @@
 import { FestivalCarousel } from "../components/FestivalCarousel";
 
-export const Home = () => {
+export const Home = (): JSX.Element => {
   return (
     <>
       <section>
