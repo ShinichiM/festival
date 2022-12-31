@@ -1,6 +1,9 @@
 import { Carousel, CarouselItem } from "react-bootstrap";
+import { EventModal } from "../components/EventModal";
+import { useState } from "react";
 
 export const FestivalCarousel = () => {
+  const [show, setShow] = useState<boolean>(false);
   return (
     <Carousel fade>
       <CarouselItem>
@@ -20,12 +23,13 @@ export const FestivalCarousel = () => {
               <h3>Here is your guide to all things delicious.</h3>
             </div>
             <div className="mt-4 row align-items-center justify-content-center">
-              <a className="btn btn-primary" href="#">
+              <span className="btn btn-primary" onClick={() => setShow(true)}>
                 {" "}
                 Sign me up!{" "}
-              </a>
+              </span>
             </div>
           </div>
+          <EventModal show={show} setShow={setShow} />
         </Carousel.Caption>
       </CarouselItem>
       <CarouselItem>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { EventModal } from "../components/EventModal";
 
 export const Tickets = () => {
@@ -57,7 +57,6 @@ export const Tickets = () => {
           </div>
         </div>
       </div>
-
       <EventModal show={show} setShow={setShow} />
       {/* <div
         className="modal fade"

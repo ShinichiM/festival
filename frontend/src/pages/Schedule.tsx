@@ -3,7 +3,6 @@ import { promises } from "stream";
 
 export const Schedule = (): JSX.Element => {
   const eventList = require("../components/ScheduleList.json");
-  const [newDay, setNewDay] = useState<boolean>(true);
 
   const dayOneEvents = eventList.filter((item: any) => item.day === "Day 1");
   const dayTwoEvents = eventList.filter((item: any) => item.day === "Day 2");

@@ -5,6 +5,12 @@
 .carousel-position {
   bottom: 10% !important;
 }
+.hide {
+  display: none;
+}
+.show {
+  display: inline-block;
+}
 html,
 body {
   margin: 0;
