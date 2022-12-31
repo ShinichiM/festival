@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { EventModal } from "../components/EventModal";
 
 export const Tickets = () => {
+  const [show, setShow] = useState<boolean>(false);
+
   return (
     <>
       <div className="ticket-content w-100 h-100vh">
@@ -47,13 +50,16 @@ export const Tickets = () => {
               className="btn btn-primary purchase"
               data-toggle="modal"
               data-target="#purchaseModal"
+              onClick={() => setShow(true)}
             >
               Purchase Tickets!
             </button>
           </div>
         </div>
       </div>
-      <div
+
+      <EventModal show={show} setShow={setShow} />
+      {/* <div
         className="modal fade"
         id="purchaseModal"
         role="dialog"
@@ -87,7 +93,6 @@ export const Tickets = () => {
                 <option>3 Passes</option>
               </select>
               <div className="form-group">
-                {/* <label for="email">Email address</label> */}
                 <input
                   type="email"
                   className="form-control"
@@ -118,7 +123,7 @@ export const Tickets = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

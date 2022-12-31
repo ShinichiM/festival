@@ -45,6 +45,7 @@ export const FestivalCarousel = () => {
             <div className="row align-items-center justify-content-center">
               <h3>Test text input</h3>
             </div>
+            <div className="mt-4 row align-items-center justify-content-center"></div>
           </div>
         </Carousel.Caption>
       </CarouselItem>
@@ -62,6 +63,7 @@ export const FestivalCarousel = () => {
             <div className="row align-items-center justify-content-center">
               <h3>Test Text</h3>
             </div>
+            <div className="mt-4 row align-items-center justify-content-center"></div>
           </div>
         </Carousel.Caption>
       </CarouselItem>

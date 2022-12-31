@@ -2,7 +2,8 @@
   background-image: url("../../public/images/chips.jpg");
 }
 
-.carousel-caption {
+.carousel-position {
+  bottom: 10% !important;
 }
 html,
 body {
