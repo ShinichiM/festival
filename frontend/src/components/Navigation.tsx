@@ -26,14 +26,7 @@ export const Navigation = ({
     } else {
       navigationTo = "/*";
     }
-    // window.location.href = navigationTo;
-    window.location.host === "localhost:3000"
-      ? window.location.replace(`http://${window.location.host}${navigationTo}`)
-      : window.history.pushState(
-          { page: `${navigationClick} page` },
-          `${navigationClick} page`,
-          `/${navigationTo}`
-        );
+    window.location.pathname = navigationTo;
   };
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
