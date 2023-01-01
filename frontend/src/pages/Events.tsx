@@ -15,7 +15,12 @@ export const Events = (): JSX.Element => {
 
   const buyTicketHandler = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
-    window.location.pathname = "/tickets/";
+    const origin = window.location.origin;
+    if (window.location.hash) {
+      return (window.location.href = origin.concat("/tickets/"));
+    } else {
+      window.location.pathname = "/tickets/";
+    }
   };
 
   return (
@@ -30,7 +35,6 @@ export const Events = (): JSX.Element => {
           <h1 className="card-title">
             {currentEvent.title || "No title information available."}
           </h1>
-          <h2 className="text-muted"></h2>
           <p className="card-text mt-3">
             {currentEvent.description || "No description available."}
           </p>

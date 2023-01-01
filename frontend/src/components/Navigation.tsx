@@ -14,19 +14,30 @@ export const Navigation = ({
     event.preventDefault();
     const navigationClick = event.currentTarget.outerText;
     let navigationTo = "";
+    const origin = window.location.origin;
+
     if (navigationClick === "Food Festival" || navigationClick === "Home") {
       setNavSelected(event.currentTarget.innerHTML.trim().toLowerCase());
       if (window.location.hash) {
-        return (window.location.href = window.location.href.split("#")[0]);
+        const path = window.location.pathname;
+        return (window.location.href = origin);
       } else {
         navigationTo = "/";
       }
     } else if (navigationClick === "Schedule") {
       setNavSelected(event.currentTarget.innerHTML.trim().toLowerCase());
-      navigationTo = "/schedule/";
+      if (window.location.hash) {
+        return (window.location.href = origin.concat("/schedule/"));
+      } else {
+        navigationTo = "/schedule/";
+      }
     } else if (navigationClick === "Tickets") {
       setNavSelected(event.currentTarget.innerHTML.trim().toLowerCase());
-      navigationTo = "/tickets/";
+      if (window.location.hash) {
+        return (window.location.href = origin.concat("/tickets/"));
+      } else {
+        navigationTo = "/tickets/";
+      }
     } else {
       navigationTo = "/*";
     }

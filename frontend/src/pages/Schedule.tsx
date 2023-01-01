@@ -10,8 +10,11 @@ export const Schedule = (): JSX.Element => {
 
   const handleEventSelection = (event: React.MouseEvent) => {
     event.preventDefault();
-    const path = `/events/${event.currentTarget.id}`;
-    window.location.pathname = path;
+    const eventItem = event.currentTarget.id.split("#")[0];
+    const origin = window.location.origin;
+    window.location.href = origin
+      .concat(`/events/${eventItem}`)
+      .concat("#".concat(event.currentTarget.id.split("#")[1]));
   };
 
   const createDayOneEvents = (): JSX.Element => {
