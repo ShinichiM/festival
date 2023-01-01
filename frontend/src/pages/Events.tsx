@@ -15,14 +15,7 @@ export const Events = (): JSX.Element => {
 
   const buyTicketHandler = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
-
-    window.location.host === "localhost:3000"
-      ? window.location.replace(`http://${window.location.host}/tickets`)
-      : window.history.pushState(
-          { page: `Tickets page` },
-          `Tickets page`,
-          `/tickets`
-        );
+    window.location.pathname = "/tickets/";
   };
 
   return (
@@ -31,6 +24,7 @@ export const Events = (): JSX.Element => {
         <img
           className="card-img-top"
           src={currentEvent.image || imgPlaceHolder}
+          alt="placeholder-img"
         />
         <div className="card-body">
           <h1 className="card-title">

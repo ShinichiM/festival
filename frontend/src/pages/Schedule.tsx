@@ -10,19 +10,8 @@ export const Schedule = (): JSX.Element => {
 
   const handleEventSelection = (event: React.MouseEvent) => {
     event.preventDefault();
-
-    window.location.host === "localhost:3000"
-      ? window.location.replace(
-          `http://${window.location.host}/events/${event.currentTarget.id}`
-        )
-      : window.history.pushState(
-          { page: `${event.currentTarget.id} page` },
-          `${event.currentTarget.id} page`,
-          `/${event.currentTarget.id}`
-        );
-
-    // const path = `/events/${event.currentTarget.id}`;
-    // document.location.pathname = path;
+    const path = `/events/${event.currentTarget.id}`;
+    window.location.pathname = path;
   };
 
   const createDayOneEvents = (): JSX.Element => {

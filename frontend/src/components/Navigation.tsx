@@ -16,13 +16,17 @@ export const Navigation = ({
     let navigationTo = "";
     if (navigationClick === "Food Festival" || navigationClick === "Home") {
       setNavSelected(event.currentTarget.innerHTML.trim().toLowerCase());
-      navigationTo = "/";
+      if (window.location.hash) {
+        return (window.location.href = window.location.href.split("#")[0]);
+      } else {
+        navigationTo = "/";
+      }
     } else if (navigationClick === "Schedule") {
       setNavSelected(event.currentTarget.innerHTML.trim().toLowerCase());
-      navigationTo = "/schedule";
+      navigationTo = "/schedule/";
     } else if (navigationClick === "Tickets") {
       setNavSelected(event.currentTarget.innerHTML.trim().toLowerCase());
-      navigationTo = "/tickets";
+      navigationTo = "/tickets/";
     } else {
       navigationTo = "/*";
     }
