@@ -1,10 +1,46 @@
 import { FestivalCarousel } from "../components/FestivalCarousel";
-
+import "../styles/App.css";
+import "../styles/index.css";
+import "../styles/bootstrap.css";
 export const Home = (): JSX.Element => {
   return (
     <>
       <section>
         <FestivalCarousel />
+
+        <div
+          className="container mobile-landing-page"
+          style={{
+            height: "100vh",
+            backgroundColor: "#282c34",
+          }}
+        >
+          <div
+            className="h-100 d-flex flex-column justify-content-center"
+            style={{ backgroundColor: "#282c34" }}
+          >
+            <div className="row align-items-center justify-content-center">
+              <h2 className="display-4 mb-2 text-white">
+                Welcome to the regional food event!
+              </h2>
+            </div>
+            <div className="row align-items-center justify-content-center">
+              <h3 className="text-white">
+                Here is your guide to all things delicious.
+              </h3>
+            </div>
+            <div className="mt-4 row align-items-center justify-content-center">
+              <span
+                className="btn btn-primary"
+                onClick={() => (document.location.pathname = "/tickets")}
+              >
+                {" "}
+                Sign me up!{" "}
+              </span>
+            </div>
+          </div>
+        </div>
+
         <div className="page-content">
           <section className="py-5">
             <div className="container">
@@ -42,47 +78,6 @@ export const Home = (): JSX.Element => {
             </div>
           </section>
         </div>
-
-        {/* <section className="call-to-action">
-        <div className="container">
-          <div className="row align-items-center justify-content-center">
-            <h1 className="mt-4 mr-5 text-white">Ready to EAT?</h1>
-            <a className="ml-5 btn btn-white">RSVP now!</a>
-          </div>
-        </div>
-      </section>
-      <div className="modal" id="myModal" role="dialog">
-        <div className="modal-dialog" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title">Modal title</h5>
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div className="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" className="btn btn-primary">
-                Save changes
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
       </section>
     </>
   );

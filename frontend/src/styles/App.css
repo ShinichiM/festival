@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+.desktop-carousel {
+  display: none !important;
+  visibility: hidden;
+}
+.mobile-landing-page {
+  display: block !important;
+}
+@media only screen and (min-width: 1024px) {
+  .desktop-carousel {
+    display: block !important;
+    visibility: visible;
+  }
+  .mobile-landing-page {
+    display: none !important;
+    visibility: hidden;
+  }
+}

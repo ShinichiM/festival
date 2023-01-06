@@ -16,11 +16,7 @@ export const Events = (): JSX.Element => {
   const buyTicketHandler = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
     const origin = window.location.origin;
-    if (window.location.hash) {
-      return (window.location.href = origin.concat("/tickets/"));
-    } else {
-      window.location.pathname = "/tickets/";
-    }
+    window.location.href = origin.concat("/tickets/");
   };
 
   return (

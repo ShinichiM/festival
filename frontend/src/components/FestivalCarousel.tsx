@@ -1,11 +1,12 @@
 import { Carousel, CarouselItem } from "react-bootstrap";
 import { EventModal } from "../components/EventModal";
 import { useState } from "react";
+import "../styles/App.css";
 
 export const FestivalCarousel = () => {
   const [show, setShow] = useState<boolean>(false);
   return (
-    <Carousel fade>
+    <Carousel fade className="desktop-carousel">
       <CarouselItem>
         <img
           className="d-block w-100 h-100vh"
